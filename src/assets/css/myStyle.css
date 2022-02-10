@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500&display=swap");
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --dark: #232830;
+  --primary: #9599e2;
+  --secondary: #6ac2fa;
+  --success: #0067b3;
+  --warning: #b30000;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: var(--dark); */
+  /* display: grid;
+    place-items: center; */
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 50%,
+    rgba(0, 84, 166, 1) 0%,
+    rgba(132, 189, 201, 1) 90%
+  );
+  min-height: 100%;
+}
+/*COMPONENT TODO COUNTER*/
+.container-counter {
+  /* background-color: aqua;   */
+  /* display: grid;
+    place-items: center; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+  height: 100px;
+  /* width: 100%; */
+}
+.container-counter--title {
+  /* dar brillo a una fuente */
+  margin: 0;
+  color: var(--white);
+  text-shadow: 0 0 30px #fff;
+  padding: 5px;
+}
+/*COMPONENT TODO LIST*/
+.container-todolist {
+  padding-top: 10px;
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* background-color: yellow; */
+  color: var(--white);
+}
+
+.container-todolist--list {
+  height: 350px;
+  line-height: 1em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  padding: 0;
+  width: 50%;
+  border: var(--secondary) solid;
+  border-radius: 8px;
+
+  /* background-color: yellow; */
+}
+/*COMPONENT  TODO ITEM*/
+.todoitem {
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 1%;
+}
+
+.todoitem--list-text {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary);
+  border-radius: 8px;
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 80%;
+  justify-content: center;
+}
+.todoitem--button-delete {
+  /* cursor: pointer;
+    background-color: var(--warning);
+    opacity: 0.6;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    border-radius: 50%;
+    margin-right: 8px; */
+  color: var(--warning);
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 0 0 0.1em #f4aab9;
+  opacity: 0.7;
+  margin: 0.3em;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+/*COMPONENT SERACH*/
+.container-search {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: blueviolet; */
+}
+.search {
+  background-color: #8fc8ee;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 15px;
+  border: none;
+  width: 40%;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: none;
+  color: var(--white);
+}
+
+.search::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 0.5;
+}
+/*cambiar el margin color al hacer click al buscador*/
+.search:focus {
+  outline: 2px solid;
+  /* hacer el contorno azul */
+  outline-color: #61dafa;
+}
+
+.searchIcon {
+  height: 30px;
+  cursor: pointer;
+  padding-left: 10px;
+  opacity: 0.3;
+}
+/* COMPONENT BUTTON CREATE  */
+.container-button-create {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+}
+
+.button-create {
+  width: 60px;
+  height: 60px;
+  background-color: var(--success);
+  opacity: 0.6;
+  border: none;
+  color: var(--white);
+  font-size: 30px;
+  border-radius: 50px;
+  text-shadow: 0 0 50px #fff;
+  z-index: 999;
+}
+
+.todoitem--list-title {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 0 0 0.1em #f4aab9;
+  opacity: 0.7;
+  margin: 0.3em;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+.active-todo {
+  color: aqua;
+  /* 1 margin 2 paddin*/
+  /* con ayuda del margin y sombra adicionas un marco*/
+  box-shadow: #f4aab9;
+  opacity: 0.7;
+  /* margin: 0.5em; */
+}
+
+.active-todo-text {
+  color: aqua;
+  /* 1 margin 2 paddin*/
+  /* con ayuda del margin y sombra adicionas un marco*/
+  box-shadow: #f4aab9;
+  opacity: 0.7;
+  /* margin: 0.5em; */
+
+  /*texto tachado*/
+  text-decoration: line-through;
+}
+
+/* Modal */
+.ModalBackground {
+  background: rgba(32, 35, 41, 0.8);
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/*FORMULARIO*/
+.form-title {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+.form-create {
+  background-color: var(--primary);
+  height: 20%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  color: var(--white);
+  margin: 30%;
+}
+
+.text-create-todo {
+  margin-bottom: 10px;
+  border: revert;
+  resize: none;
+  height: 60px;
+  outline: none;
+  padding: 8px;
+}
+.button-todo {
+  margin-bottom: 10px;
+  border: revert;
+  resize: none;
+  height: 30px;
+  border-radius: 4px;
+  background-color: aquamarine;
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+  margin-left: 20%;
+  margin-right: 20%;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.button-cancel {
+  background-color: var(--warning);
+  opacity: 0.8;
+}
+.button-add {
+  background-color: var(--success);
+  opacity: 0.8;
+}
+
+/*RESPONSIVE DEIGNE*/
+@media screen and (max-width: 625px) {
+  .container-todolist--list {
+    width: 85%;
+    height: 300px;
+  }
+
+  .form-create {
+    height: 20%;
+    width: 80%;
+    margin: 10%;
+  }
+
+  .searchIcon {
+    display: none;
+  }
+}
+
+.text--extra {
+  margin: 30%;
+}
